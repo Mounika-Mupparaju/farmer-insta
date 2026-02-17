@@ -98,6 +98,19 @@ function Media({ posts = [], refreshPosts }) {
     }
   };
 
+  const handleDelete = async (postId, title) => {
+    // Simple client-side guard; in real app you'd also authorize on backend
+    // eslint-disable-next-line no-alert
+    const ok = window.confirm(`Delete this post: "${title || ''}"?`);
+    if (!ok) return;
+    try {
+      await api.deletePost(postId);
+      if (refreshPosts) refreshPosts();
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <section className="section">
       <header className="section-header">
@@ -230,6 +243,13 @@ function Media({ posts = [], refreshPosts }) {
                     aria-pressed={isFollowing}
                   >
                     {isFollowing ? t('media.following') : t('media.followFarm')}
+                  </button>
+                  <button
+                    type="button"
+                    className="ghost-btn"
+                    onClick={() => handleDelete(post.id, post.title)}
+                  >
+                    {t('media.delete')}
                   </button>
                 </div>
 

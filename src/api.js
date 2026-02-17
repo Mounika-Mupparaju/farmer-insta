@@ -64,6 +64,10 @@ export const api = {
       method: 'POST',
       body: JSON.stringify({ clientId: getClientId() }),
     }),
+  deletePost: (postId) =>
+    request(`/api/posts/${postId}`, {
+      method: 'DELETE',
+    }),
 
   getGuides: () => request('/api/guides'),
   getEquipment: () => request('/api/equipment'),
