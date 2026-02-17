@@ -45,7 +45,8 @@
     "submitComment": "Post comment",
     "following": "Following",
     "unfollow": "Unfollow",
-    "uploadMedia": "Image or video (optional)"
+    "uploadMedia": "Image or video (optional)",
+    "delete": "Delete"
   },
   "knowledge": {
     "title": "Knowledge Exchange",
