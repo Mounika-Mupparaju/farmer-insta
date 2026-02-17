@@ -1,0 +1,129 @@
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+
+function Sales({ items, cart, onAddToCart, onAddSalesItem }) {
+  const { t } = useTranslation();
+  const [showAddForm, setShowAddForm] = useState(false);
+
+  const handleSubmitProduct = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.productName.value.trim();
+    const farm = form.farmName.value.trim();
+    const price = form.price.value.trim();
+    const location = form.location.value.trim();
+    const tagsStr = form.tags.value.trim();
+    const tags = tagsStr ? tagsStr.split(',').map((s) => s.trim()).filter(Boolean) : [];
+    if (!name || !farm || !price) return;
+    onAddSalesItem({ name, farm, price, location, tags });
+    form.reset();
+    setShowAddForm(false);
+  };
+
+  return (
+    <section className="section">
+      <header className="section-header">
+        <h2>{t('sales.title')}</h2>
+        <p>{t('sales.description')}</p>
+        <button
+          type="button"
+          className="primary-btn"
+          onClick={() => setShowAddForm((v) => !v)}
+          aria-expanded={showAddForm}
+        >
+          {t('sales.addProduct')}
+        </button>
+      </header>
+      {showAddForm && (
+        <div className="card form-card">
+          <h3>{t('sales.addProduct')}</h3>
+          <form onSubmit={handleSubmitProduct}>
+            <label>
+              {t('sales.productName')}
+              <input type="text" name="productName" required placeholder={t('sales.productName')} />
+            </label>
+            <label>
+              {t('sales.farmName')}
+              <input type="text" name="farmName" required placeholder={t('sales.farmName')} />
+            </label>
+            <label>
+              {t('sales.priceLabel')}
+              <input type="text" name="price" required placeholder="₹50 / kg" />
+            </label>
+            <label>
+              {t('sales.locationLabel')}
+              <input type="text" name="location" placeholder={t('sales.locationLabel')} />
+            </label>
+            <label>
+              {t('sales.tagsPlaceholder')}
+              <input type="text" name="tags" placeholder={t('sales.tagsPlaceholder')} />
+            </label>
+            <div className="card-footer-row">
+              <button type="submit" className="primary-btn">{t('sales.submitProduct')}</button>
+              <button type="button" className="ghost-btn" onClick={() => setShowAddForm(false)}>
+                {t('common.cancel')}
+              </button>
+            </div>
+          </form>
+        </div>
+      )}
+      <div className="grid">
+        {items.map((item) => (
+          <article key={item.id} className="card">
+            <h3>{item.name}</h3>
+            <p className="muted">
+              {item.farm} • {item.location}
+            </p>
+            <p className="highlight-text">{item.price}</p>
+            <div className="tag-row">
+              {(item.tags || []).map((tag) => (
+                <span key={tag} className="tag">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="card-footer-row">
+              <button
+                type="button"
+                className="primary-btn"
+                onClick={() => onAddToCart(item)}
+              >
+                {t('sales.addToCart')}
+              </button>
+              <button type="button" className="ghost-btn">
+                {t('sales.viewFarmProfile')}
+              </button>
+            </div>
+          </article>
+        ))}
+      </div>
+      <aside className="card cart-card">
+        <h3>{t('sales.yourCart')}</h3>
+        {cart.length === 0 ? (
+          <p className="muted">{t('sales.cartEmpty')}</p>
+        ) : (
+          <>
+            <ul className="list">
+              {cart.map((item) => (
+                <li key={item.id} className="list-item">
+                  <div>
+                    <div className="list-title">{item.name}</div>
+                    <div className="muted">
+                      {item.farm} • {item.price}
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <button type="button" className="primary-btn full-width">
+              {t('sales.proceedPayment')}
+            </button>
+          </>
+        )}
+      </aside>
+    </section>
+  );
+}
+
+export default Sales;
+

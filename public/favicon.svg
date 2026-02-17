@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="fieldGradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#15803d"/>
+    </linearGradient>
+    <linearGradient id="skyGradient" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#bfdbfe"/>
+    </linearGradient>
+  </defs>
+  <!-- sky -->
+  <rect x="0" y="0" width="64" height="36" fill="url(#skyGradient)" />
+  <!-- sun -->
+  <circle cx="48" cy="16" r="6" fill="#facc15" />
+  <!-- fields -->
+  <path d="M0 28 Q16 24 32 28 T64 28 L64 64 L0 64 Z" fill="url(#fieldGradient)"/>
+  <path d="M0 36 Q16 32 32 36 T64 36" fill="none" stroke="#bbf7d0" stroke-width="2"/>
+  <path d="M0 44 Q16 40 32 44 T64 44" fill="none" stroke="#bbf7d0" stroke-width="2"/>
+  <!-- leaf / plant -->
+  <g transform="translate(24,20)">
+    <path d="M8 24 C8 16 8 12 8 6" stroke="#14532d" stroke-width="2" stroke-linecap="round"/>
+    <path d="M8 10 C4 6 2 2 4 0 C7 1 10 3 12 6 C10 8 9 9 8 10Z" fill="#16a34a"/>
+    <path d="M8 14 C4 18 2 22 4 24 C7 23 10 21 12 18 C10 16 9 15 8 14Z" fill="#22c55e"/>
+  </g>
+</svg>
+

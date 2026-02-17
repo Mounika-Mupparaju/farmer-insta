@@ -1,0 +1,127 @@
+{
+  "common": {
+    "cancel": "Cancel"
+  },
+  "app": {
+    "title": "AgroVibes",
+    "subtitle": "Farming community, marketplace, and learning hub — in one place.",
+    "pillFarmerFirst": "Farmer-first",
+    "pillSocial": "Social + Commerce",
+    "pillWebMvp": "Web MVP",
+    "cart": "Cart",
+    "cartItem": "item",
+    "cartItems": "items",
+    "footer": "This is a front-end MVP prototype. To make it production-ready, connect it to a backend (authentication, database, payments, notifications) and deploy on web and mobile."
+  },
+  "nav": {
+    "mediaFeed": "Media Feed",
+    "knowledge": "Knowledge",
+    "equipment": "Equipment",
+    "labor": "Labor",
+    "products": "Fertilizers & Seeds",
+    "sales": "Direct Sales",
+    "learning": "Learning Hub",
+    "community": "Community"
+  },
+  "media": {
+    "title": "Media Sharing & Stories",
+    "description": "Farmers share daily life, practices, and equipment in photo and video form. Consumers follow, like, and learn.",
+    "like": "Like",
+    "comment": "Comment",
+    "followFarm": "Follow farm"
+  },
+  "knowledge": {
+    "title": "Knowledge Exchange",
+    "description": "Step-by-step guides, quick tutorials, and space for live Q&A between experienced and new farmers.",
+    "guidesProcedures": "Guides & Procedures",
+    "open": "Open",
+    "liveQA": "Live Q&A (concept)",
+    "liveQADesc": "In a full version, mentors would schedule live sessions. Farmers can submit questions ahead of time and join via video.",
+    "weeklySoil": "Weekly: Ask a soil scientist",
+    "saturdayTime": "Every Saturday • 6–7 PM",
+    "notifyMe": "Notify me",
+    "helpDesk": "New farmer help desk",
+    "dropQuestions": "Drop your questions any time",
+    "ask": "Ask"
+  },
+  "equipment": {
+    "title": "Equipment Marketplace",
+    "description": "Farmers showcase equipment for sale or rental with tutorials and simple scheduling.",
+    "includesOperator": "Includes trained operator.",
+    "operatorNotIncluded": "Operator not included.",
+    "requestRent": "Request rent",
+    "requestSell": "Request sell",
+    "viewTutorial": "View usage tutorial",
+    "listEquipment": "List equipment",
+    "itemName": "Equipment name",
+    "modeLabel": "Rent or Sell",
+    "priceLabel": "Price (e.g. ₹1,500 / day)",
+    "locationLabel": "Location",
+    "operatorLabel": "Includes operator?",
+    "submitEquipment": "List equipment"
+  },
+  "labor": {
+    "title": "Labor Connections",
+    "description": "Farmers discover skilled workers, and laborers list their skills, availability, and location.",
+    "availableLabor": "Available Labor",
+    "contact": "Contact",
+    "postJob": "Post a Job",
+    "postJobNote": "This is a simple front-end prototype. Jobs you add will stay only in your current browser session.",
+    "jobTitle": "Job title",
+    "jobTitlePlaceholder": "e.g. Harvest helpers for paddy",
+    "location": "Location",
+    "locationPlaceholder": "Village / town",
+    "type": "Type",
+    "typePlaceholder": "Seasonal / Full-time / Contract",
+    "postJobBtn": "Post job",
+    "openJobs": "Open Jobs",
+    "viewApplicants": "View applicants"
+  },
+  "products": {
+    "title": "Fertilizers & Seeds Guidance",
+    "description": "Compare organic and chemical options with clear instructions, benefits, and risks.",
+    "benefits": "Benefits",
+    "risksCautions": "Risks & cautions"
+  },
+  "sales": {
+    "title": "Direct Farmer-to-Customer Sales",
+    "description": "Farmers list produce with transparent pricing. Consumers buy directly with minimal middlemen.",
+    "addToCart": "Add to cart",
+    "viewFarmProfile": "View farm profile",
+    "yourCart": "Your Cart (demo)",
+    "cartEmpty": "Add some farm products to see them here.",
+    "proceedPayment": "Proceed to payment (placeholder)",
+    "addProduct": "Add product to marketplace",
+    "productName": "Product name",
+    "farmName": "Farm / Seller name",
+    "priceLabel": "Price (e.g. ₹50 / kg)",
+    "locationLabel": "Location",
+    "tagsPlaceholder": "Tags (comma-separated, e.g. Organic, Fresh)",
+    "submitProduct": "List product"
+  },
+  "learning": {
+    "title": "Learning Hub & Gamification",
+    "description": "Courses, best practices, and badges to motivate continuous learning and experimentation.",
+    "modules": "modules",
+    "badge": "Badge",
+    "progress": "Progress",
+    "continueCourse": "Continue course"
+  },
+  "community": {
+    "title": "Community & Future Features",
+    "description": "A home for farmer influencers, success stories, and upcoming smart-farming integrations.",
+    "farmerInfluencers": "Farmer Influencers",
+    "influencersDesc": "In the full platform, creators would host channels, live sessions, and sponsored demos for brands.",
+    "follow": "Follow",
+    "futureOpportunities": "Future Opportunities (Concept)",
+    "aiCrop": "AI Crop Diagnosis — farmers upload plant images to detect diseases and get treatment suggestions.",
+    "droneIot": "Drone & IoT Integration — monitor fields, automate spraying, and track microclimate data.",
+    "blockchain": "Blockchain Traceability — ensure farm-to-fork transparency for premium buyers.",
+    "government": "Government Integrations — surface schemes, subsidies, and support programs matched to each farmer."
+  },
+  "language": {
+    "en": "English",
+    "te": "తెలుగు",
+    "hi": "हिंदी"
+  }
+}
