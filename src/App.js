@@ -39,7 +39,7 @@ function App() {
     salesItems: null,
     courses: null,
   });
-  const [apiError, setApiError] = useState(false);
+  const [apiError, setApiError] = useState(false); // used when API fails so we fall back to static data
 
   useEffect(() => {
     let cancelled = false;
@@ -133,7 +133,7 @@ function App() {
   };
 
   return (
-    <div className="app-root">
+    <div className="app-root" data-offline={apiError || undefined}>
       <header className="app-header">
         <div>
           <h1 className="app-title">{t('app.title')}</h1>
